@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url("https://png.pngtree.com/background/20210715/original/pngtree-minimalist-peach-pink-ink-background-picture-image_1314853.jpg");
+
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(153, 24, 46);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+input[type=text] {
+    font-weight: bold;
+    width: 70%;
+    padding: 8px 10px;
+    margin: 8px 0;
+    border: 2px solid rgb(153, 24, 46);
+    border-radius: 4px;
+
+}
+
+input[type=text]::placeholder {
+    color: black;
+    font-weight: 500;
+}
+
+.delete {
+    padding: 8px 15px;
+    color: #000;
+    border-radius: 5px;
+    margin: 20px;
+    border: 0;
+    align-items: center;
+    background-color: #ff0000;
+    font-weight: bold;
+}
+
+.add {
+    padding: 8px 15px;
+    font-weight: bold;
+    color: #000;
+    border-radius: 5px;
+    border: 0;
+    align-items: center;
+    background-color: #004225;
+}
+
+form {
+    border: 0;
+    width: 500px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    border: 2px solid rgb(153, 24, 46);
+
+
+
+}

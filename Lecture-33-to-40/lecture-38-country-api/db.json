@@ -1,0 +1,62 @@
+{
+    "country": [
+        {
+            "id": 1,
+            "name": "asia"
+        },
+        {
+            "id": 2,
+            "name": "russia"
+        },
+        {
+            "id": 3,
+            "name": "USA"
+        },
+        {
+            "id": 4,
+            "name": "europe"
+        }
+    ],
+    "state": [
+        {
+            "id": 1,
+            "name": "Bharat",
+            "countryid": 1
+        },
+        {
+            "id": 2,
+            "name": "Thailand",
+            "countryid": 1
+        },
+        {
+            "id": 3,
+            "name": "Kamchatka-Territory",
+            "countryid": 2
+        },
+        {
+            "id": 4,
+            "name": "Moscow",
+            "countryid": 2
+        },
+        {
+            "id": 5,
+            "name": "Florida",
+            "countryid": 3
+        },
+        {
+            "id": 6,
+            "name": "Arizona",
+            "countryid": 3
+        },
+        {
+            "id": 7,
+            "name": "Poland",
+            "countryid": 4
+        },
+        {
+            "id": 8,
+            "name": "Spain",
+            "countryid": 4
+        }
+    ]
+}

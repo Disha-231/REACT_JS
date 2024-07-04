@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+.poduct .btngroup{
+  margin: 20px;
+   display: flex;
+   justify-content: space-between;
+}
+.poduct .btngroup button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(99, 96, 96);
+    color: white;
+
+}
+.mainbox{
+    display: flex;
+    flex-wrap: wrap;
+}
+.mainbox .box {
+    border: 1px solid black;
+     margin: 20px;
+     padding: 20px;
+     width: 250px;
+     height: 300px;
+}
+.mainbox .box img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.mainbox .box .box-title{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}

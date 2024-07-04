@@ -1,0 +1,29 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+.tbl{
+  margin: 20px;
+  
+}
+table{
+  background-color: aliceblue;
+}
+h1{
+  background-color: rgb(168, 168, 139);
+  margin-bottom: 10px;
+}
+.tbl th{
+  padding: 10px;
+  border: 1px solid black;
+}
+.tbl td{
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+

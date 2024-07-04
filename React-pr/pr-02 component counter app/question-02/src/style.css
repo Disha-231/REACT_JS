@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.counter{
+    margin-top: 250px;
+}
+.counter .title{
+    font-size: 30px;
+    margin: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.counter .counting{
+    margin: 20px;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.counter .plus{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px;
+    border: 0;
+    color: #fff;
+    background-color: #353C3D;
+}
+.counter .minus{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px;
+    border: 0;
+    color: #fff;
+    background-color: #353C3D;
+}
+.counter .zero{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px;
+    border: 0;
+    color: #fff;
+    background-color: #353C3D;
+}
