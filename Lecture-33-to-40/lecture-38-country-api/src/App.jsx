@@ -1,64 +1,46 @@
-
 import axios from "axios";
-import { useEffect, useState } from "react"
+import { useEffect } from "react";
+import { useState } from "react"
 
 function App() {
+
   const [country, setCountry] = useState([]);
-  const [con, setCon] = useState('')
-  const [state, setState] = useState([])
+  const [con, setCon] = useState("");
+  const [state, setState] = useState([]);
 
   const getCountry = async () => {
     try {
-      let all = await axios.get(`http://localhost:7000/country`)
+      let all = await axios.get(`http://localhost:8000/country`);
       setCountry(all.data)
     } catch (err) {
-
-      console.log(err);
       return false
     }
   }
+
+  const getState = async () => {
+    try {
+      let all = await axios.get(`http://localhost:8000/state`);
+      let ans = all.data.filter(val => val.countryid == con);
+      setState(ans);
+    } catch (err) {
+      return false
+    }
+  };
+
   useEffect(() => {
     getCountry()
   }, [])
 
-
-
-
-  const getstate = async () => {
-    try {
-      let all = await axios.get(`http://localhost:7000/state`)
-      let ans = all.data.filter(val => val.countryid == con)
-      console.log(ans);
-      setState(ans)
-      console.log(all);
-      setState(all.data)
-    } catch (err) {
-
-      console.log(err);
-      return false
-    }
-  }
   useEffect(() => {
-    getstate()
+    getState();
   }, [con])
-
-
-
-
-
-
-
-
-
-
-
-
 
   return (
     <>
       <div align="center">
+        <h3>DYNAMIC DEPENDENT</h3>
         <select onChange={(e) => setCon(e.target.value)} value={con}>
-          <option value={""}>--SELECT-COUNTRY--</option>
+          <option value="">---Select Country--</option>
           {
             country.map((c) => {
               return (
@@ -68,12 +50,8 @@ function App() {
           }
         </select>
 
-
-
-
-
-        <select>
-          <option>--SELECT-STATE--</option>
+        <select onChange={(e) => setCon(e.target.value)} value="">
+          <option value="">---Select State--</option>
           {
             state.map((s) => {
               return (
@@ -83,9 +61,12 @@ function App() {
           }
         </select>
       </div>
-
     </>
   )
 }
 
 export default App
+
+
+
+
