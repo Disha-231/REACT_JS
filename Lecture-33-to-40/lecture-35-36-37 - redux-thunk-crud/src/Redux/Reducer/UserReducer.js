@@ -1,45 +1,45 @@
+
 let initialstate = {
     userList: [],
     error: null
 }
-const UserReducer = (state = initialstate, Action) => {
-    switch (Action.type) {
+const UserReducer = (state = initialstate, action) => {
+    switch (action.type) {
         case 'add_user':
             return {
                 ...state,
-                userList: [...state.userList, Action.payload],
+                userList: [...state.userList, action.payload],
                 error: null
             }
         case 'add_user_error':
             return {
                 ...state,
-                error: Action.payload
+                error: action.payload
             }
         case 'view_user':
             return {
                 ...state,
-                userList: Action.payload,
+                userList: action.payload,
                 error: null
             }
         case 'view_user_error':
             return {
                 ...state,
-                error: Action.payload
+                error: action.payload
             }
 
         case 'delete_user':
 
             return {
                 ...state,
-                userList: state.userList.filter(val => val.id != Action.payload),
+                userList: state.userList.filter(val => val.id != action.payload),
                 error: null
             }
         case 'delete_user_error':
             return {
                 ...state,
-                error: Action.payload
+                error: action.payload
             }
-
 
         default:
             return state
@@ -47,3 +47,5 @@ const UserReducer = (state = initialstate, Action) => {
 
 }
 export default UserReducer
+
+

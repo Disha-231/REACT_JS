@@ -1,3 +1,5 @@
+
+
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { ADD_USER } from '../Redux/CrudAction/UserAction'
@@ -16,7 +18,7 @@ const Add = () => {
     }
     return (
         <div align="center">
-            <h3>Crud Using Thunk</h3><br />
+            <h3>Crud Using Thunk ADD AND DELETE</h3><br />
             <form onSubmit={handlesubmit}>
                 <label>Enter Name:</label> &nbsp;&nbsp;&nbsp;
                 <input type="text"
@@ -30,7 +32,7 @@ const Add = () => {
                     placeholder='Enter Your Phone...!'
                     id="phone" name="phone" />
                 <br /><br />
-                <button type="submit" className='btn btn-success'>Add</button>
+                <button type="submit" className='btn btn-success'>Add</button><br></br><br></br>
                 <Link to={'/View'}>View</Link>
             </form>
 
@@ -39,3 +41,5 @@ const Add = () => {
 }
 
 export default Add
+
+
