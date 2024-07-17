@@ -8,7 +8,7 @@ const View = () => {
     useEffect(() => {
         dispatch(ViewUser())
     }, [])
-    const users = useSelector(state => state.user)
+    const users = useSelector(state => state.form.userList)
     console.log(users)
     return (
         <div>
@@ -32,22 +32,25 @@ const View = () => {
                                     <tbody>
                                         
 
-                                            {
-                                               users && Object.entries(users).map(([value, index]) => {
+                                            { 
+                                              users && Object.entries(users).map(([key, value]) => {
                                                     return (
-                                                        <tr key={index}>
-                                                            <td>{++index}</td>
+                                                        <tr key={key}>
+                                                            <td>{key}</td>
                                                             <td>{value.name}</td>
                                                             <td>{value.phone}</td>
                                                             <td>
+                                                                <button className="btn btn-danger">DELETE</button>
+                                                                &nbsp; &nbsp; &nbsp;
                                                                 <Link to={`/edit/${key}`}>
                                                                 <button className="btn btn-primary">
-                                                                    Edit</button>
+                                                                    EDIT</button>
                                                             </Link></td>
                                                         </tr>
                                                     )
                                                 })
-                                        }
+                                        } 
+                                
                                         
                                     </tbody>
                                 </table>

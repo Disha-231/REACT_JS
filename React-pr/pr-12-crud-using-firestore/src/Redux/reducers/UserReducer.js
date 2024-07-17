@@ -3,8 +3,8 @@ let initialState = {
     error : null
 }
 
-const formReducer = () => {
-    return (state = initialState, action) => {
+const formReducer = (state = initialState, action) => {
+   
         switch (action.type) {
 
             case 'adduser' :
@@ -14,15 +14,18 @@ const formReducer = () => {
                 }
 
                 case 'viewuser':
+                    console.log(action.payload)
+                    
                 return {
                     ...state,
                     userList : action.payload
+                   
                 }
 
             default :
                 return state;
         }
-    }
+    
 } 
 
 export default formReducer;
