@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import { DeleteUser, MultipleDeleteUser, ViewUser } from '../Redux/action/UserAction'
+import { MdDelete } from "react-icons/md";//delete button
+import { MdEditSquare } from "react-icons/md";//Edit
+import { AiOutlineUsergroupDelete } from "react-icons/ai";//multiple delete
 
 const View = () => {
     const [status, setStatus] = useState("")
@@ -40,25 +43,25 @@ const View = () => {
 
     const handleMultipleDelete = () => {
         dispatch(MultipleDeleteUser(multipleDelete))
-        alert("Multiple Delete Employee Successfully")
+        alert("Multiple Delete Employee List Successfully")
         setMultipleDelete([])
     }
 
     return (
         <div>
-            <div className="container">
+            <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-12">
                         <center>
                             <br></br>
 
                             <div className="title">
-                                <h3>Your Data Is Here..!</h3>
+                                <h3> Your Data Is Here..!</h3>
                             </div>
                             <br></br>
                             <br></br>
                             <div className="data">
-                                <table className="table">
+                                <table className="table table-hover table-dark" border={2}>
                                     <thead>
                                         <tr>
                                             <th scope="col">Id</th>
@@ -71,10 +74,13 @@ const View = () => {
                                             <th scope="col">Status</th>
                                             <th scope='col'>Delete</th>
                                             <th scope='col'>Edit</th>
-                                            <th>
+                                            <th  scope='col'>
                                                 <button onClick={handleMultipleDelete}
-                                                    style={{ fontWeight: "900", background: "transparent", border: "none", fontSize: "12px" }}
-                                                >Multiple-Delete</button>
+                                                    style={{ fontWeight: "700",
+                                                        width:"80px",
+                                                    background: "white",
+                                                 border: "none", fontSize: "20px",color:"black" }}
+                                                ><AiOutlineUsergroupDelete /></button>
                                             </th>
 
                                         </tr>
@@ -104,7 +110,7 @@ const View = () => {
                                                         </td>
                                                         <td>
                                                             <button onClick={() => Delete_user(key)}
-                                                                className="btn btn-danger">Delete</button>
+                                                                className="btn btn-danger"><MdDelete /></button>
 
                                                         </td>
                                                         <td>
@@ -112,7 +118,7 @@ const View = () => {
                                                             <button
                                                                 onClick={() => navigate('/Edit', { state: [key, value] })}
                                                                 className="btn btn-primary">
-                                                                Edit</button>
+                                                                <MdEditSquare /></button>
                                                         </td>
                                                         <td>
                                                             <input type="checkbox" onChange={(e) => handlechangedelete(key, e.target.checked)}
